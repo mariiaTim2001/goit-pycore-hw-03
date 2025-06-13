@@ -2,12 +2,12 @@ import re
 
 def normalize_phone(phone_number: str) -> str:
     if not isinstance(phone_number, str):
-        return "Error! Phone number must be a string"
+        return "Error! Phone number must be a string."
     
     digits = re.sub(r'[^\d+]', '', phone_number)
 
     if len(phone_number) < 10:
-        return "Error! Phone number must be at least 10 characters long"
+        return "Error! Phone number must be at least 10 characters long."
     
     if digits.startswith('+'):
         return digits

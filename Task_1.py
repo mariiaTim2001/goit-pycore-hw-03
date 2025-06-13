@@ -3,11 +3,11 @@ from datetime import datetime
 
 def get_days_from_today(date: str = None) -> str:
     if date is None:
-        return "Error! Date cannot be None"
+        return "Error! Date cannot be None."
     if not isinstance(date, str):
-        return "Error! Date must be a string in format YYYY-MM-DD"
+        return "Error! Date must be a string in format YYYY-MM-DD."
     if not re.match(r'^\d{4}-\d{2}-\d{2}$', date):
-        return "Date must be in the format YYYY-MM-DD"
+        return "Date must be in the format YYYY-MM-DD."
    
     try:
         user_date = datetime.strptime(date, '%Y-%m-%d').date()
@@ -31,4 +31,4 @@ def get_days_from_today(date: str = None) -> str:
 # print(get_days_from_today("2023/10/01"))
 # print(get_days_from_today(""))
 # print(get_days_from_today("2020-01-01"))
-# print(get_days_from_today("2050-01-01"))  
+# print(get_days_from_today("2050-01-01"))
