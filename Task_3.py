@@ -18,14 +18,12 @@ def normalize_phone(phone_number: str) -> str:
             return '+38' + digits
         
 # Test cases
-# phones = [
+# raw_numbers = [
 #     "    +38(050)123-32-34",
 #     "     0503451234",
 #     "(050)8889900",
 #     "38050-111-22-22",
 #     "38050 111 22 11   ",
-#     True,
-#     38078907543,
 #      "067\\t123 4567",
 #     "(095) 234-5678\\n",
 #     "+380 44 123 4567",
@@ -37,5 +35,5 @@ def normalize_phone(phone_number: str) -> str:
 #     "38050 111 22 11   ",
 # ]
 
-# for p in phones:
-#     print(normalize_phone(p))
+# sanitized_numbers = [normalize_phone(num) for num in raw_numbers]
+# print("Нормалізовані номери телефонів для SMS-розсилки:", sanitized_numbers)
